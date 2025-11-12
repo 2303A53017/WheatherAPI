@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather — Modern Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>ClimaGlow</h1>
+        <p class="tag">Your redesigned weather dashboard</p>
+      </div>
+
+      <div class="info">
+        <p>Quick actions</p>
+        <ul>
+          <li>Search any city</li>
+          <li>Toggle °C / °F</li>
+          <li>Use "Load Default" for <strong>New Delhi</strong></li>
+        </ul>
+        <p class="small">Include this page in your assignment report with screenshots of results.</p>
+      </div>
+
+      <div class="credits">
+        <small>Data from OpenWeatherMap • Built for Web Tech</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="search-panel">
+        <form id="search-form" onsubmit="return false;">
+          <input id="city-input" type="text" placeholder="Search city (e.g., London)" autocomplete="off" />
+          <div class="controls">
+            <select id="units-select" aria-label="units">
+              <option value="metric">Celsius (°C)</option>
+              <option value="imperial">Fahrenheit (°F)</option>
+            </select>
+            <button id="search-btn" class="btn primary">Search</button>
+            <button id="load-fixed" class="btn ghost">Load Default</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="current-wrap">
+        <div id="current-weather" class="current-card glass">
+          <div class="stub">Search to see weather</div>
+        </div>
+        <div id="extra" class="extra glass">
+          <div><strong>Humidity</strong><div id="humi">—</div></div>
+          <div><strong>Wind</strong><div id="wind">—</div></div>
+          <div><strong>Feels like</strong><div id="feels">—</div></div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="heading">5-day Forecast</h2>
+        <div id="forecast" class="forecast-row">
+          <!-- forecast items here -->
+        </div>
+      </section>
+
+      <footer class="bottom">
+        <div class="tests glass">
+          <button id="test-btn" class="btn">Run JS Tests</button>
+          <div id="test-output" class="test-output">console results here</div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
